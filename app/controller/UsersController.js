@@ -37,7 +37,7 @@ const UsersController = {
       });
     }
   },
-  userLogin: async = (req, res)=> {
+  userLogin: async (req, res)=> {
     let data = req.body;
     try {
       let result = await UsersModel.findOne({
