@@ -1,6 +1,6 @@
 const UsersModel = require("../model/UsersModel");
 const UsersController = {
-  userSignUp: async (req, res)=> {
+  userSignUp: async (req, res) => {
     let data = req.body;
     let password = data.password;
     let saltRound = 10;
@@ -37,7 +37,7 @@ const UsersController = {
       });
     }
   },
-  userLogin: async (req, res)=> {
+  userLogin: async (req, res) => {
     let data = req.body;
     try {
       let result = await UsersModel.findOne({
